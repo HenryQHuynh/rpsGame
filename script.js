@@ -1,4 +1,7 @@
 const selectionButtons = document.querySelectorAll('[data-selection]')
+const finalColumn = document.querySelector('[data-final-column]')
+const computerScoreSpan = document.querySelector('[data-computer-score]')
+const yourScoreSpan = document.querySelector('[data-your-score]')
 const SELECTIONS = [
    {
       name: 'fire',
@@ -30,6 +33,24 @@ function makeSelection(selection) {
    const youreWinner = isWinner(selection, computerSelection)
    const computerWinner = isWinner(computerSelection, selection)
    console.log(computerSelection)
+
+   addSelectionResult(computerSelection, computerWinner)
+   addSelectionResult(selection, youreWinner)
+
+   if (youreWinner) incrementScore(yourScoreSpan)
+   if (computerWinner) incrementScore (computerScoreSpan)
+}
+
+function incrementScore(scoreSpan) {
+   scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+}
+
+function addSelectionResult(selection, winner) {
+   const div = document.createElement('div')
+   div.innerText = selection.pic
+   div.classList.add('result-selection')
+   if (winner) div.classList.add('winner')
+   finalColumn.after(div)
 }
 
 function isWinner(selection, opponentSelection) {
