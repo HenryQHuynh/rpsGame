@@ -10,9 +10,15 @@
 </head>
 <body>
    <div class="selections">
-      <button class="selection"><img class="resize" src="pics/fire.png" alt="fire"></button>
-      <button class="selection"><img class="resize" src="pics/water.png" alt="water"></button>
-      <button class="selection"><img class="resize" src="pics/grass.png" alt="grass"></button>
+      <button class="selection" data-selection="fire">
+         <img class="resize" src="pics/fire.png" alt="fire">
+      </button>
+      <button class="selection" data-selection="water">
+         <img class="resize" src="pics/water.png" alt="water">
+      </button>
+      <button class="selection" data-selection="grass">
+         <img class="resize" src="pics/grass.png" alt="grass">
+      </button>
    </div>
    <div class="results">
       <div>
@@ -23,6 +29,12 @@
          Computer
          <span class="result-score">0</span>
       </div>
+      <!-- <div class="result-selection winner">
+         <img class="resize" src="pics/fire.png" alt="fire">
+      </div>
+      <div class="result-selection">
+         <img class="resize" src="pics/grass.png" alt="grass">
+      </div> -->
    </div>
 </body>
 </html>
