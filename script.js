@@ -2,20 +2,20 @@ const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
-const SELECTIONS = [
+var SELECTIONS = [
    {
       name: 'fire',
-      pic: './pics/fire.png',
+      pic: '🔥',
       beats: 'grass'
    },
    {
       name: 'water',
-      pic: './pics/water.png',
+      pic: '🌊',
       beats: 'fire'
    },
    {
       name: 'grass',
-      pic: './pics/grass.png',
+      pic: '🍃',
       beats: 'water'
    }
 ]
