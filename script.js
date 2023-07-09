@@ -2,10 +2,9 @@ const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
-const backgroundMusic = new Audio('assets/music/Pokémon Omega Ruby & Alpha Sapphire - Gym Leader Battle Music (HQ).mp3');
+const backgroundMusic = new Audio('assets/music/pokebttlems.mp3');
 
 backgroundMusic.loop = true;
-backgroundMusic.play();
 backgroundMusic.volume = 0.15;
 
 var SELECTIONS = [
@@ -31,6 +30,7 @@ selectionButtons.forEach(selectionButton => {
      const selectionName = selectionButton.dataset.selection
      const selection = SELECTIONS.find(selection => selection.name === selectionName)
      makeSelection(selection);
+     backgroundMusic.play();
    })
  })
 
